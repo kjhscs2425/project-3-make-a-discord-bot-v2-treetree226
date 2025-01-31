@@ -4,7 +4,7 @@ When a user says: mock me: "_____"
 My bot will respond by: saying what is in the "" with alternating caps
 
 When a user says: "joke"
-My bot will respond by: randomly selecting a joke from the 5 I have made
+My bot will respond by: randomly selecting a joke from the 2 I have made
 
 When a user says: "hi"
 My bot will respond by: it'll say "hi, friend!" 5 times
