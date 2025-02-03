@@ -8,6 +8,20 @@ This function will be called every time anyone says anything on a channel where 
 * You can have the bot respond differently to different users
 """
 import random
+from emoji import EMOJI_DATA
+from string import punctuation
+from collections import Counter
+
+emojis = list(EMOJI_DATA.keys())
+
+def vowelOrConsonant(x): 
+    if (x == 'a' or x == 'e' or x == 'i' or 
+        x == 'o' or x == 'u' or x == 'A' or 
+        x == 'E' or x == 'I' or x == 'O' or 
+        x == 'U'): 
+        return random.choice(emojis)
+    else: 
+        return random.choice(punctuation)
 
 def should_i_respond(user_message, user_name):
   if "robot" in user_message:
@@ -21,6 +35,14 @@ def should_i_respond(user_message, user_name):
   elif "growth mindset" in user_message:
     return True
   elif "funny" in user_message:
+    return True
+  elif "beer" in user_message:
+    return True
+  elif "grentperez" in user_message:
+    return True
+  elif "random" in user_message:
+    return True
+  elif "counter" in user_message:
     return True
   else: 
     return False
@@ -44,8 +66,8 @@ def respond(user_message, user_name):
       word += letter.upper() if thingy % 2 else letter
     return word
   elif "joke" in user_message:
-    joke= random.choice(["what did hawk one say to hawk two? tawk to the hand!", "what's white, black, and red all over? a penguin in a blender"])
-    return joke #FIX HEREEEEEE
+    joke= random.choice(["what did hawk one say to hawk two? tawk to the hand!", "what's white, black, and red all over? a penguin in a blender", "What did the fish say when he swam into a wall? Dam.", "What do you call a fish with no eyes? Fsh.", "What do you call a can opener that doesn’t work? A can’t opener! "])
+    return joke 
   elif "hi" in user_message:
     for i in range(5):
       return f"""hi, friend!!"""
@@ -54,16 +76,19 @@ def respond(user_message, user_name):
   elif "funny" in user_message:
     return "https://www.youtube.com/watch?v=LNew965FXZs"
   elif "?" in user_message:
-    user_message.replace("?",)
-  
-
+    user_message.replace("?")
+  elif "beer" in user_message:
+    return f"""beerrrrrrrrrr!!"""
+  elif "grentperez" in user_message:
+    return f"""https://www.grentperez.com/"""
+  elif "random" in user_message:
+    x = ""
+    for letter in user_message:
+      x+= vowelOrConsonant(letter)
+    return x
+  elif "counter" in user_message:
+    counter = Counter(user_message)
+    ah= counter['z']
+    return f"""there are {ah} z's in your message"""
   else: 
     return False
-  
-  
-
-  
-
-# def mock(user_message, user_name):
-#   return 
-
