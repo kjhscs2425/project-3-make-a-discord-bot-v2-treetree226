@@ -34,6 +34,8 @@ def should_i_respond(user_message, user_name):
     return True
   elif "growth mindset" in user_message:
     return True
+  elif "?" in user_message:
+    return True
   elif "funny" in user_message:
     return True
   elif "beer" in user_message:
@@ -69,14 +71,14 @@ def respond(user_message, user_name):
     joke= random.choice(["what did hawk one say to hawk two? tawk to the hand!", "what's white, black, and red all over? a penguin in a blender", "What did the fish say when he swam into a wall? Dam.", "What do you call a fish with no eyes? Fsh.", "What do you call a can opener that doesn’t work? A can’t opener! "])
     return joke 
   elif "hi" in user_message:
-    for i in range(5):
-      return f"""hi, friend!!"""
+    return f"""hi, friend!!"""
   elif "growth mindset" in user_message:
     return user_message + " yet"
   elif "funny" in user_message:
     return "https://www.youtube.com/watch?v=LNew965FXZs"
   elif "?" in user_message:
-    user_message.replace("?")
+    return f"""I say: {user_message}"
+    {user_message.replace("?", "!")}"""
   elif "beer" in user_message:
     return f"""beerrrrrrrrrr!!"""
   elif "grentperez" in user_message:

@@ -1,13 +1,15 @@
 # Proposal
 
+LOOK AT REUQIREMENTS 
+
 When a user says: mock me: "_____" 
 My bot will respond by: saying what is in the "" with alternating caps
 
 When a user says: "joke"
 My bot will respond by: randomly selecting a joke from the 5 I have made
 
-When a user says: "hi" FIX THIS ONE IT DOESNT REPEAT
-My bot will respond by: it'll say "hi, friend!" 5 times
+When a user says: "hi" 
+My bot will respond by: it'll say "hi, friend!" 
 
 When a user says: "growth mindset: "__(something you've been procrastinating on)_"
 My bot will respond by: "___" + yet!
