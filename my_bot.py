@@ -68,7 +68,7 @@ def respond(user_message, user_name):
       word += letter.upper() if thingy % 2 else letter
     return word
   elif "joke" in user_message:
-    joke= random.choice(["what did hawk one say to hawk two? tawk to the hand!", "what's white, black, and red all over? a penguin in a blender", "What did the fish say when he swam into a wall? Dam.", "What do you call a fish with no eyes? Fsh.", "What do you call a can opener that doesn’t work? A can’t opener! "])
+    joke= random.choice(["what did hawk one say to hawk two? tawk to the hand!", "what's white, black, and red all over? a penguin in a blender", "What did the fish say when he swam into a wall? Dam.", "What do you call a fish with no eyes? Fsh.", "What do you call a can opener that doesn’t work? A can’t opener! ", "Why can't dinosaurs clap? they're dead"])
     return joke 
   elif "hi" in user_message:
     nickname= user_name[0:3]
